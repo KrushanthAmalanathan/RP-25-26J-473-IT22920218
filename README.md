@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Smart Traffic Control with SUMO Integration
 
 Complete smart traffic control system with memory-based adaptive signaling and SUMO visualization.
@@ -198,3 +199,6 @@ Edit `backend/controller/traffic_controller.py`:
 ```python
 self.weights = {"bike": 1, "car": 2, "auto": 2, "bus": 4, "truck": 4, "lorry": 4}
 ```
+=======
+# RP-25-26J-473-IT22920218 
+>>>>>>> c20a4193f94887515d42d8eb4fbc36c45f0e9241
