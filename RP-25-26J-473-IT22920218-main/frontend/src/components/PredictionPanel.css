@@ -1,0 +1,74 @@
+.prediction-panel {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.prediction-header {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.prediction-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.prediction-row:last-child {
+  margin-bottom: 0;
+}
+
+.prediction-label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.prediction-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.prediction-value {
+  color: #374151;
+  font-weight: 600;
+}
+
+.probability-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 150px;
+}
+
+.probability-bar {
+  flex: 1;
+  height: 16px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.probability-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.probability-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  min-width: 35px;
+  text-align: right;
+}

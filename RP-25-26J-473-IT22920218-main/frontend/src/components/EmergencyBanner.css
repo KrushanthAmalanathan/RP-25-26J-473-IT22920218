@@ -1,0 +1,50 @@
+.emergency-banner {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  animation: emergencyPulse 1s infinite;
+  margin-bottom: 20px;
+}
+
+.emergency-icon {
+  font-size: 2rem;
+  animation: rotate 2s linear infinite;
+}
+
+.emergency-message {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.emergency-message strong {
+  font-size: 1.125rem;
+}
+
+.emergency-message span {
+  font-size: 0.875rem;
+  opacity: 0.95;
+}
+
+@keyframes emergencyPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
