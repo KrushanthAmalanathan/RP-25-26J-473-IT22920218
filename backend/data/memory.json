@@ -5601,5 +5601,2397 @@
     "action_duration": 60,
     "reward": 2.0,
     "reason": "phase_end"
+  },
+  {
+    "time": 2099,
+    "state_queues": {
+      "north": 111,
+      "east": 4,
+      "south": 113,
+      "west": 31
+    },
+    "action_road": "west",
+    "action_duration": 60,
+    "reward": 2.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2104,
+    "state_queues": {
+      "north": 112,
+      "east": 4,
+      "south": 115,
+      "west": 28
+    },
+    "action_road": "west",
+    "action_duration": 50,
+    "reward": 2.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2109,
+    "state_queues": {
+      "north": 112,
+      "east": 4,
+      "south": 115,
+      "west": 26
+    },
+    "action_road": "west",
+    "action_duration": 44,
+    "reward": 2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2114,
+    "state_queues": {
+      "north": 112,
+      "east": 2,
+      "south": 115,
+      "west": 24
+    },
+    "action_road": "west",
+    "action_duration": 44,
+    "reward": -2.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2119,
+    "state_queues": {
+      "north": 112,
+      "east": 2,
+      "south": 115,
+      "west": 26
+    },
+    "action_road": "west",
+    "action_duration": 45,
+    "reward": 1.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2124,
+    "state_queues": {
+      "north": 112,
+      "east": 4,
+      "south": 115,
+      "west": 24
+    },
+    "action_road": "west",
+    "action_duration": 40,
+    "reward": 1.8333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2129,
+    "state_queues": {
+      "north": 112,
+      "east": 5,
+      "south": 115,
+      "west": 22
+    },
+    "action_road": "south",
+    "action_duration": 60,
+    "reward": 6.166666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2134,
+    "state_queues": {
+      "north": 107,
+      "east": 5,
+      "south": 109,
+      "west": 26
+    },
+    "action_road": "west",
+    "action_duration": 35,
+    "reward": 2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2139,
+    "state_queues": {
+      "north": 107,
+      "east": 4,
+      "south": 109,
+      "west": 24
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 5.166666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2144,
+    "state_queues": {
+      "north": 102,
+      "east": 4,
+      "south": 104,
+      "west": 28
+    },
+    "action_road": "west",
+    "action_duration": 36,
+    "reward": 3.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2149,
+    "state_queues": {
+      "north": 102,
+      "east": 4,
+      "south": 104,
+      "west": 25
+    },
+    "action_road": "west",
+    "action_duration": 33,
+    "reward": -3.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2154,
+    "state_queues": {
+      "north": 102,
+      "east": 6,
+      "south": 104,
+      "west": 28
+    },
+    "action_road": "west",
+    "action_duration": 33,
+    "reward": 1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2159,
+    "state_queues": {
+      "north": 102,
+      "east": 9,
+      "south": 104,
+      "west": 26
+    },
+    "action_road": "west",
+    "action_duration": 32,
+    "reward": 1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2164,
+    "state_queues": {
+      "north": 102,
+      "east": 6,
+      "south": 104,
+      "west": 25
+    },
+    "action_road": "west",
+    "action_duration": 34,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2169,
+    "state_queues": {
+      "north": 102,
+      "east": 4,
+      "south": 106,
+      "west": 25
+    },
+    "action_road": "west",
+    "action_duration": 35,
+    "reward": -1.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2174,
+    "state_queues": {
+      "north": 104,
+      "east": 4,
+      "south": 106,
+      "west": 26
+    },
+    "action_road": "west",
+    "action_duration": 34,
+    "reward": 2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2176,
+    "state_queues": {
+      "north": 106,
+      "east": 4,
+      "south": 109,
+      "west": 23
+    },
+    "action_road": "east",
+    "action_duration": 11,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2181,
+    "state_queues": {
+      "north": 106,
+      "east": 4,
+      "south": 109,
+      "west": 23
+    },
+    "action_road": "west",
+    "action_duration": 27,
+    "reward": 3.6666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2186,
+    "state_queues": {
+      "north": 106,
+      "east": 4,
+      "south": 111,
+      "west": 19
+    },
+    "action_road": "west",
+    "action_duration": 21,
+    "reward": 4.166666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2191,
+    "state_queues": {
+      "north": 110,
+      "east": 5,
+      "south": 111,
+      "west": 14
+    },
+    "action_road": "west",
+    "action_duration": 14,
+    "reward": -0.33333333333333337,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2196,
+    "state_queues": {
+      "north": 110,
+      "east": 1,
+      "south": 111,
+      "west": 15
+    },
+    "action_road": "west",
+    "action_duration": 13,
+    "reward": 3.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2201,
+    "state_queues": {
+      "north": 110,
+      "east": 1,
+      "south": 111,
+      "west": 12
+    },
+    "action_road": "west",
+    "action_duration": 13,
+    "reward": 2.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2206,
+    "state_queues": {
+      "north": 110,
+      "east": 1,
+      "south": 111,
+      "west": 10
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2211,
+    "state_queues": {
+      "north": 110,
+      "east": 3,
+      "south": 111,
+      "west": 12
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": -0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2216,
+    "state_queues": {
+      "north": 110,
+      "east": 5,
+      "south": 111,
+      "west": 12
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -1.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2221,
+    "state_queues": {
+      "north": 110,
+      "east": 5,
+      "south": 111,
+      "west": 13
+    },
+    "action_road": "south",
+    "action_duration": 60,
+    "reward": 5.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2226,
+    "state_queues": {
+      "north": 103,
+      "east": 5,
+      "south": 106,
+      "west": 17
+    },
+    "action_road": "west",
+    "action_duration": 13,
+    "reward": 1.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2231,
+    "state_queues": {
+      "north": 103,
+      "east": 5,
+      "south": 106,
+      "west": 16
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 4.333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2236,
+    "state_queues": {
+      "north": 99,
+      "east": 6,
+      "south": 102,
+      "west": 17
+    },
+    "action_road": "west",
+    "action_duration": 13,
+    "reward": 1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2241,
+    "state_queues": {
+      "north": 99,
+      "east": 3,
+      "south": 102,
+      "west": 16
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 4.166666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2243,
+    "state_queues": {
+      "north": 99,
+      "east": 2,
+      "south": 102,
+      "west": 12
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 3.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2245,
+    "state_queues": {
+      "north": 99,
+      "east": 2,
+      "south": 102,
+      "west": 9
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2247,
+    "state_queues": {
+      "north": 99,
+      "east": 2,
+      "south": 102,
+      "west": 9
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2249,
+    "state_queues": {
+      "north": 99,
+      "east": 2,
+      "south": 102,
+      "west": 9
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2251,
+    "state_queues": {
+      "north": 99,
+      "east": 2,
+      "south": 102,
+      "west": 9
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2253,
+    "state_queues": {
+      "north": 100,
+      "east": 4,
+      "south": 102,
+      "west": 8
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2258,
+    "state_queues": {
+      "north": 101,
+      "east": 4,
+      "south": 102,
+      "west": 8
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -2.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2263,
+    "state_queues": {
+      "north": 102,
+      "east": 4,
+      "south": 104,
+      "west": 10
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 0.33333333333333337,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2267,
+    "state_queues": {
+      "north": 106,
+      "east": 4,
+      "south": 104,
+      "west": 9
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2272,
+    "state_queues": {
+      "north": 108,
+      "east": 5,
+      "south": 110,
+      "west": 7
+    },
+    "action_road": "east",
+    "action_duration": 12,
+    "reward": 0.33333333333333337,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2274,
+    "state_queues": {
+      "north": 110,
+      "east": 4,
+      "south": 112,
+      "west": 7
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.16666666666666663,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2276,
+    "state_queues": {
+      "north": 112,
+      "east": 5,
+      "south": 114,
+      "west": 6
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2278,
+    "state_queues": {
+      "north": 112,
+      "east": 4,
+      "south": 114,
+      "west": 4
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 1.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2280,
+    "state_queues": {
+      "north": 112,
+      "east": 4,
+      "south": 114,
+      "west": 3
+    },
+    "action_road": "west",
+    "action_duration": 10,
+    "reward": -1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2285,
+    "state_queues": {
+      "north": 112,
+      "east": 7,
+      "south": 114,
+      "west": 4
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2290,
+    "state_queues": {
+      "north": 112,
+      "east": 7,
+      "south": 114,
+      "west": 4
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2295,
+    "state_queues": {
+      "north": 112,
+      "east": 8,
+      "south": 115,
+      "west": 6
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2297,
+    "state_queues": {
+      "north": 112,
+      "east": 6,
+      "south": 115,
+      "west": 6
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -1.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2302,
+    "state_queues": {
+      "north": 112,
+      "east": 6,
+      "south": 115,
+      "west": 7
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 1.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2307,
+    "state_queues": {
+      "north": 112,
+      "east": 6,
+      "south": 115,
+      "west": 6
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -1.8333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2312,
+    "state_queues": {
+      "north": 112,
+      "east": 5,
+      "south": 115,
+      "west": 8
+    },
+    "action_road": "south",
+    "action_duration": 60,
+    "reward": 6.333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2317,
+    "state_queues": {
+      "north": 108,
+      "east": 7,
+      "south": 109,
+      "west": 8
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 1.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2322,
+    "state_queues": {
+      "north": 108,
+      "east": 5,
+      "south": 109,
+      "west": 7
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 4.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2327,
+    "state_queues": {
+      "north": 104,
+      "east": 7,
+      "south": 104,
+      "west": 7
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 4.166666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2331,
+    "state_queues": {
+      "north": 104,
+      "east": 6,
+      "south": 104,
+      "west": 3
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2333,
+    "state_queues": {
+      "north": 104,
+      "east": 4,
+      "south": 104,
+      "west": 3
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2335,
+    "state_queues": {
+      "north": 104,
+      "east": 5,
+      "south": 104,
+      "west": 3
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2337,
+    "state_queues": {
+      "north": 104,
+      "east": 5,
+      "south": 104,
+      "west": 3
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -0.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2342,
+    "state_queues": {
+      "north": 104,
+      "east": 3,
+      "south": 104,
+      "west": 4
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": -1.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2347,
+    "state_queues": {
+      "north": 104,
+      "east": 3,
+      "south": 104,
+      "west": 5
+    },
+    "action_road": "west",
+    "action_duration": 12,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2349,
+    "state_queues": {
+      "north": 104,
+      "east": 3,
+      "south": 104,
+      "west": 5
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2351,
+    "state_queues": {
+      "north": 104,
+      "east": 3,
+      "south": 104,
+      "west": 5
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2353,
+    "state_queues": {
+      "north": 106,
+      "east": 1,
+      "south": 104,
+      "west": 5
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2355,
+    "state_queues": {
+      "north": 108,
+      "east": 1,
+      "south": 104,
+      "west": 5
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": -0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2357,
+    "state_queues": {
+      "north": 108,
+      "east": 1,
+      "south": 106,
+      "west": 5
+    },
+    "action_road": "west",
+    "action_duration": 11,
+    "reward": 0.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2362,
+    "state_queues": {
+      "north": 108,
+      "east": 3,
+      "south": 106,
+      "west": 4
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 4.666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2366,
+    "state_queues": {
+      "north": 103,
+      "east": 4,
+      "south": 105,
+      "west": 6
+    },
+    "action_road": "east",
+    "action_duration": 11,
+    "reward": 0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2371,
+    "state_queues": {
+      "north": 103,
+      "east": 4,
+      "south": 105,
+      "west": 4
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 6.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2376,
+    "state_queues": {
+      "north": 97,
+      "east": 4,
+      "south": 101,
+      "west": 5
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 9.166666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2381,
+    "state_queues": {
+      "north": 88,
+      "east": 4,
+      "south": 100,
+      "west": 5
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 6.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2386,
+    "state_queues": {
+      "north": 82,
+      "east": 4,
+      "south": 97,
+      "west": 5
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 3.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2391,
+    "state_queues": {
+      "north": 79,
+      "east": 4,
+      "south": 94,
+      "west": 5
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 6.333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2396,
+    "state_queues": {
+      "north": 73,
+      "east": 6,
+      "south": 90,
+      "west": 5
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2401,
+    "state_queues": {
+      "north": 73,
+      "east": 8,
+      "south": 88,
+      "west": 5
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 3.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2406,
+    "state_queues": {
+      "north": 70,
+      "east": 8,
+      "south": 87,
+      "west": 5
+    },
+    "action_road": "south",
+    "action_duration": 60,
+    "reward": 4.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2411,
+    "state_queues": {
+      "north": 65,
+      "east": 8,
+      "south": 83,
+      "west": 7
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2416,
+    "state_queues": {
+      "north": 63,
+      "east": 9,
+      "south": 81,
+      "west": 7
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 2.8333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2421,
+    "state_queues": {
+      "north": 60,
+      "east": 9,
+      "south": 80,
+      "west": 9
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 5.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2426,
+    "state_queues": {
+      "north": 54,
+      "east": 13,
+      "south": 80,
+      "west": 11
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 3.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2431,
+    "state_queues": {
+      "north": 52,
+      "east": 13,
+      "south": 74,
+      "west": 11
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 3.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2436,
+    "state_queues": {
+      "north": 49,
+      "east": 14,
+      "south": 73,
+      "west": 11
+    },
+    "action_road": "north",
+    "action_duration": 45,
+    "reward": 7.833333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2441,
+    "state_queues": {
+      "north": 41,
+      "east": 14,
+      "south": 74,
+      "west": 11
+    },
+    "action_road": "north",
+    "action_duration": 32,
+    "reward": 3.8333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2446,
+    "state_queues": {
+      "north": 38,
+      "east": 14,
+      "south": 69,
+      "west": 11
+    },
+    "action_road": "north",
+    "action_duration": 21,
+    "reward": 5.166666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2451,
+    "state_queues": {
+      "north": 33,
+      "east": 14,
+      "south": 66,
+      "west": 13
+    },
+    "action_road": "west",
+    "action_duration": 38,
+    "reward": 2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2456,
+    "state_queues": {
+      "north": 37,
+      "east": 11,
+      "south": 69,
+      "west": 10
+    },
+    "action_road": "north",
+    "action_duration": 21,
+    "reward": -0.8333333333333334,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2461,
+    "state_queues": {
+      "north": 37,
+      "east": 15,
+      "south": 70,
+      "west": 10
+    },
+    "action_road": "east",
+    "action_duration": 25,
+    "reward": 2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2466,
+    "state_queues": {
+      "north": 40,
+      "east": 12,
+      "south": 72,
+      "west": 9
+    },
+    "action_road": "north",
+    "action_duration": 27,
+    "reward": 2.833333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2471,
+    "state_queues": {
+      "north": 36,
+      "east": 12,
+      "south": 77,
+      "west": 11
+    },
+    "action_road": "north",
+    "action_duration": 23,
+    "reward": 0.33333333333333337,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2476,
+    "state_queues": {
+      "north": 35,
+      "east": 14,
+      "south": 76,
+      "west": 14
+    },
+    "action_road": "north",
+    "action_duration": 21,
+    "reward": 4.666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2481,
+    "state_queues": {
+      "north": 30,
+      "east": 14,
+      "south": 75,
+      "west": 17
+    },
+    "action_road": "north",
+    "action_duration": 15,
+    "reward": 2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2486,
+    "state_queues": {
+      "north": 28,
+      "east": 14,
+      "south": 74,
+      "west": 17
+    },
+    "action_road": "north",
+    "action_duration": 16,
+    "reward": -5.166666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2491,
+    "state_queues": {
+      "north": 33,
+      "east": 16,
+      "south": 71,
+      "west": 19
+    },
+    "action_road": "north",
+    "action_duration": 21,
+    "reward": -1.1666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2496,
+    "state_queues": {
+      "north": 33,
+      "east": 17,
+      "south": 75,
+      "west": 21
+    },
+    "action_road": "north",
+    "action_duration": 22,
+    "reward": 1.8333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2501,
+    "state_queues": {
+      "north": 31,
+      "east": 20,
+      "south": 73,
+      "west": 21
+    },
+    "action_road": "south",
+    "action_duration": 60,
+    "reward": -3.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2506,
+    "state_queues": {
+      "north": 31,
+      "east": 20,
+      "south": 76,
+      "west": 21
+    },
+    "action_road": "north",
+    "action_duration": 23,
+    "reward": -1.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2511,
+    "state_queues": {
+      "north": 33,
+      "east": 20,
+      "south": 71,
+      "west": 21
+    },
+    "action_road": "north",
+    "action_duration": 21,
+    "reward": 3.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2516,
+    "state_queues": {
+      "north": 30,
+      "east": 20,
+      "south": 67,
+      "west": 22
+    },
+    "action_road": "north",
+    "action_duration": 25,
+    "reward": -2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2521,
+    "state_queues": {
+      "north": 32,
+      "east": 23,
+      "south": 63,
+      "west": 24
+    },
+    "action_road": "north",
+    "action_duration": 27,
+    "reward": 1.1666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2526,
+    "state_queues": {
+      "north": 31,
+      "east": 23,
+      "south": 62,
+      "west": 24
+    },
+    "action_road": "north",
+    "action_duration": 27,
+    "reward": 1.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2531,
+    "state_queues": {
+      "north": 30,
+      "east": 23,
+      "south": 60,
+      "west": 24
+    },
+    "action_road": "north",
+    "action_duration": 28,
+    "reward": -3.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2536,
+    "state_queues": {
+      "north": 32,
+      "east": 26,
+      "south": 61,
+      "west": 26
+    },
+    "action_road": "north",
+    "action_duration": 28,
+    "reward": 2.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2541,
+    "state_queues": {
+      "north": 30,
+      "east": 26,
+      "south": 61,
+      "west": 26
+    },
+    "action_road": "north",
+    "action_duration": 28,
+    "reward": 0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2546,
+    "state_queues": {
+      "north": 30,
+      "east": 26,
+      "south": 57,
+      "west": 28
+    },
+    "action_road": "west",
+    "action_duration": 46,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2551,
+    "state_queues": {
+      "north": 32,
+      "east": 22,
+      "south": 59,
+      "west": 28
+    },
+    "action_road": "north",
+    "action_duration": 29,
+    "reward": -2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2556,
+    "state_queues": {
+      "north": 34,
+      "east": 24,
+      "south": 57,
+      "west": 29
+    },
+    "action_road": "east",
+    "action_duration": 39,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2561,
+    "state_queues": {
+      "north": 37,
+      "east": 23,
+      "south": 58,
+      "west": 31
+    },
+    "action_road": "north",
+    "action_duration": 35,
+    "reward": -0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2566,
+    "state_queues": {
+      "north": 37,
+      "east": 25,
+      "south": 59,
+      "west": 31
+    },
+    "action_road": "north",
+    "action_duration": 33,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2571,
+    "state_queues": {
+      "north": 37,
+      "east": 26,
+      "south": 57,
+      "west": 32
+    },
+    "action_road": "north",
+    "action_duration": 34,
+    "reward": 0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2576,
+    "state_queues": {
+      "north": 36,
+      "east": 28,
+      "south": 56,
+      "west": 34
+    },
+    "action_road": "north",
+    "action_duration": 36,
+    "reward": 0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2581,
+    "state_queues": {
+      "north": 35,
+      "east": 30,
+      "south": 55,
+      "west": 36
+    },
+    "action_road": "north",
+    "action_duration": 35,
+    "reward": 1.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2586,
+    "state_queues": {
+      "north": 34,
+      "east": 30,
+      "south": 52,
+      "west": 37
+    },
+    "action_road": "north",
+    "action_duration": 31,
+    "reward": -0.16666666666666674,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2591,
+    "state_queues": {
+      "north": 33,
+      "east": 32,
+      "south": 53,
+      "west": 41
+    },
+    "action_road": "north",
+    "action_duration": 35,
+    "reward": 0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2596,
+    "state_queues": {
+      "north": 32,
+      "east": 32,
+      "south": 56,
+      "west": 41
+    },
+    "action_road": "south",
+    "action_duration": 60,
+    "reward": 0.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2601,
+    "state_queues": {
+      "north": 32,
+      "east": 32,
+      "south": 55,
+      "west": 43
+    },
+    "action_road": "north",
+    "action_duration": 36,
+    "reward": 2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2606,
+    "state_queues": {
+      "north": 29,
+      "east": 33,
+      "south": 55,
+      "west": 46
+    },
+    "action_road": "north",
+    "action_duration": 35,
+    "reward": 1.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2611,
+    "state_queues": {
+      "north": 27,
+      "east": 34,
+      "south": 54,
+      "west": 48
+    },
+    "action_road": "north",
+    "action_duration": 34,
+    "reward": -4.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2616,
+    "state_queues": {
+      "north": 31,
+      "east": 34,
+      "south": 54,
+      "west": 48
+    },
+    "action_road": "north",
+    "action_duration": 33,
+    "reward": 2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2621,
+    "state_queues": {
+      "north": 29,
+      "east": 34,
+      "south": 52,
+      "west": 49
+    },
+    "action_road": "north",
+    "action_duration": 34,
+    "reward": -1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2626,
+    "state_queues": {
+      "north": 31,
+      "east": 36,
+      "south": 47,
+      "west": 49
+    },
+    "action_road": "north",
+    "action_duration": 34,
+    "reward": -1.8333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2631,
+    "state_queues": {
+      "north": 33,
+      "east": 36,
+      "south": 44,
+      "west": 51
+    },
+    "action_road": "north",
+    "action_duration": 32,
+    "reward": -0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2636,
+    "state_queues": {
+      "north": 33,
+      "east": 36,
+      "south": 43,
+      "west": 53
+    },
+    "action_road": "north",
+    "action_duration": 36,
+    "reward": -3.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2641,
+    "state_queues": {
+      "north": 36,
+      "east": 36,
+      "south": 43,
+      "west": 55
+    },
+    "action_road": "west",
+    "action_duration": 60,
+    "reward": 3.8333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2646,
+    "state_queues": {
+      "north": 38,
+      "east": 31,
+      "south": 47,
+      "west": 51
+    },
+    "action_road": "north",
+    "action_duration": 39,
+    "reward": -0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2651,
+    "state_queues": {
+      "north": 39,
+      "east": 31,
+      "south": 44,
+      "west": 51
+    },
+    "action_road": "east",
+    "action_duration": 60,
+    "reward": 2.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2656,
+    "state_queues": {
+      "north": 43,
+      "east": 28,
+      "south": 48,
+      "west": 49
+    },
+    "action_road": "north",
+    "action_duration": 38,
+    "reward": -0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2661,
+    "state_queues": {
+      "north": 43,
+      "east": 28,
+      "south": 48,
+      "west": 50
+    },
+    "action_road": "north",
+    "action_duration": 43,
+    "reward": -2.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2666,
+    "state_queues": {
+      "north": 44,
+      "east": 32,
+      "south": 51,
+      "west": 52
+    },
+    "action_road": "north",
+    "action_duration": 42,
+    "reward": 1.8333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2671,
+    "state_queues": {
+      "north": 43,
+      "east": 33,
+      "south": 44,
+      "west": 53
+    },
+    "action_road": "north",
+    "action_duration": 42,
+    "reward": 3.8333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2676,
+    "state_queues": {
+      "north": 39,
+      "east": 33,
+      "south": 45,
+      "west": 53
+    },
+    "action_road": "north",
+    "action_duration": 42,
+    "reward": 0.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2681,
+    "state_queues": {
+      "north": 38,
+      "east": 33,
+      "south": 45,
+      "west": 55
+    },
+    "action_road": "north",
+    "action_duration": 46,
+    "reward": 2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2686,
+    "state_queues": {
+      "north": 36,
+      "east": 33,
+      "south": 43,
+      "west": 55
+    },
+    "action_road": "north",
+    "action_duration": 46,
+    "reward": -0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2691,
+    "state_queues": {
+      "north": 36,
+      "east": 33,
+      "south": 44,
+      "west": 56
+    },
+    "action_road": "south",
+    "action_duration": 41,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2696,
+    "state_queues": {
+      "north": 39,
+      "east": 34,
+      "south": 43,
+      "west": 58
+    },
+    "action_road": "north",
+    "action_duration": 43,
+    "reward": 2.8333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2701,
+    "state_queues": {
+      "north": 36,
+      "east": 37,
+      "south": 41,
+      "west": 58
+    },
+    "action_road": "north",
+    "action_duration": 44,
+    "reward": -2.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2706,
+    "state_queues": {
+      "north": 39,
+      "east": 37,
+      "south": 38,
+      "west": 58
+    },
+    "action_road": "north",
+    "action_duration": 47,
+    "reward": 1.8333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2711,
+    "state_queues": {
+      "north": 37,
+      "east": 39,
+      "south": 37,
+      "west": 58
+    },
+    "action_road": "north",
+    "action_duration": 46,
+    "reward": -4.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2716,
+    "state_queues": {
+      "north": 41,
+      "east": 39,
+      "south": 37,
+      "west": 61
+    },
+    "action_road": "north",
+    "action_duration": 48,
+    "reward": 1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2721,
+    "state_queues": {
+      "north": 39,
+      "east": 41,
+      "south": 37,
+      "west": 62
+    },
+    "action_road": "north",
+    "action_duration": 50,
+    "reward": 2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2726,
+    "state_queues": {
+      "north": 37,
+      "east": 41,
+      "south": 35,
+      "west": 62
+    },
+    "action_road": "north",
+    "action_duration": 47,
+    "reward": -3.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2731,
+    "state_queues": {
+      "north": 41,
+      "east": 41,
+      "south": 31,
+      "west": 63
+    },
+    "action_road": "north",
+    "action_duration": 45,
+    "reward": -4.166666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2736,
+    "state_queues": {
+      "north": 45,
+      "east": 41,
+      "south": 31,
+      "west": 64
+    },
+    "action_road": "west",
+    "action_duration": 60,
+    "reward": 3.6666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2741,
+    "state_queues": {
+      "north": 49,
+      "east": 36,
+      "south": 34,
+      "west": 60
+    },
+    "action_road": "north",
+    "action_duration": 45,
+    "reward": 1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2746,
+    "state_queues": {
+      "north": 48,
+      "east": 36,
+      "south": 29,
+      "west": 62
+    },
+    "action_road": "east",
+    "action_duration": 60,
+    "reward": 2.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2751,
+    "state_queues": {
+      "north": 54,
+      "east": 32,
+      "south": 32,
+      "west": 62
+    },
+    "action_road": "north",
+    "action_duration": 51,
+    "reward": -0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2756,
+    "state_queues": {
+      "north": 55,
+      "east": 33,
+      "south": 28,
+      "west": 62
+    },
+    "action_road": "north",
+    "action_duration": 51,
+    "reward": -2.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2761,
+    "state_queues": {
+      "north": 57,
+      "east": 33,
+      "south": 30,
+      "west": 62
+    },
+    "action_road": "north",
+    "action_duration": 57,
+    "reward": -0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2766,
+    "state_queues": {
+      "north": 57,
+      "east": 33,
+      "south": 29,
+      "west": 64
+    },
+    "action_road": "north",
+    "action_duration": 54,
+    "reward": -0.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2771,
+    "state_queues": {
+      "north": 57,
+      "east": 33,
+      "south": 31,
+      "west": 64
+    },
+    "action_road": "north",
+    "action_duration": 54,
+    "reward": -0.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2776,
+    "state_queues": {
+      "north": 57,
+      "east": 34,
+      "south": 31,
+      "west": 66
+    },
+    "action_road": "north",
+    "action_duration": 51,
+    "reward": -2.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2781,
+    "state_queues": {
+      "north": 58,
+      "east": 34,
+      "south": 35,
+      "west": 68
+    },
+    "action_road": "north",
+    "action_duration": 52,
+    "reward": 3.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2786,
+    "state_queues": {
+      "north": 55,
+      "east": 34,
+      "south": 33,
+      "west": 68
+    },
+    "action_road": "south",
+    "action_duration": 26,
+    "reward": -1.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2791,
+    "state_queues": {
+      "north": 54,
+      "east": 36,
+      "south": 34,
+      "west": 69
+    },
+    "action_road": "north",
+    "action_duration": 54,
+    "reward": 0.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2796,
+    "state_queues": {
+      "north": 54,
+      "east": 36,
+      "south": 34,
+      "west": 69
+    },
+    "action_road": "north",
+    "action_duration": 57,
+    "reward": 1.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2801,
+    "state_queues": {
+      "north": 52,
+      "east": 37,
+      "south": 36,
+      "west": 71
+    },
+    "action_road": "north",
+    "action_duration": 56,
+    "reward": 4.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2806,
+    "state_queues": {
+      "north": 48,
+      "east": 39,
+      "south": 34,
+      "west": 71
+    },
+    "action_road": "north",
+    "action_duration": 57,
+    "reward": -1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2811,
+    "state_queues": {
+      "north": 49,
+      "east": 41,
+      "south": 35,
+      "west": 71
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 1.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2816,
+    "state_queues": {
+      "north": 48,
+      "east": 41,
+      "south": 35,
+      "west": 71
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 3.8333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2821,
+    "state_queues": {
+      "north": 44,
+      "east": 41,
+      "south": 34,
+      "west": 73
+    },
+    "action_road": "north",
+    "action_duration": 56,
+    "reward": -6.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2826,
+    "state_queues": {
+      "north": 50,
+      "east": 41,
+      "south": 32,
+      "west": 75
+    },
+    "action_road": "north",
+    "action_duration": 56,
+    "reward": 1.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2831,
+    "state_queues": {
+      "north": 48,
+      "east": 41,
+      "south": 32,
+      "west": 77
+    },
+    "action_road": "west",
+    "action_duration": 60,
+    "reward": 3.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2836,
+    "state_queues": {
+      "north": 51,
+      "east": 39,
+      "south": 36,
+      "west": 73
+    },
+    "action_road": "north",
+    "action_duration": 59,
+    "reward": -3.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2841,
+    "state_queues": {
+      "north": 55,
+      "east": 39,
+      "south": 32,
+      "west": 73
+    },
+    "action_road": "east",
+    "action_duration": 60,
+    "reward": 1.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2846,
+    "state_queues": {
+      "north": 55,
+      "east": 37,
+      "south": 36,
+      "west": 71
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": -5.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2851,
+    "state_queues": {
+      "north": 60,
+      "east": 37,
+      "south": 37,
+      "west": 73
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 3.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2856,
+    "state_queues": {
+      "north": 57,
+      "east": 37,
+      "south": 37,
+      "west": 73
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2861,
+    "state_queues": {
+      "north": 57,
+      "east": 38,
+      "south": 35,
+      "west": 73
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2866,
+    "state_queues": {
+      "north": 57,
+      "east": 38,
+      "south": 33,
+      "west": 74
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 1.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2871,
+    "state_queues": {
+      "north": 56,
+      "east": 38,
+      "south": 29,
+      "west": 76
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 1.8333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2876,
+    "state_queues": {
+      "north": 54,
+      "east": 38,
+      "south": 29,
+      "west": 77
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": -0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2881,
+    "state_queues": {
+      "north": 54,
+      "east": 39,
+      "south": 29,
+      "west": 77
+    },
+    "action_road": "south",
+    "action_duration": 27,
+    "reward": -2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2886,
+    "state_queues": {
+      "north": 52,
+      "east": 40,
+      "south": 31,
+      "west": 79
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 1.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2891,
+    "state_queues": {
+      "north": 50,
+      "east": 43,
+      "south": 33,
+      "west": 79
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 0.16666666666666663,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2896,
+    "state_queues": {
+      "north": 49,
+      "east": 45,
+      "south": 36,
+      "west": 79
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": -2.1666666666666665,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2901,
+    "state_queues": {
+      "north": 52,
+      "east": 45,
+      "south": 31,
+      "west": 79
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": -0.6666666666666667,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2906,
+    "state_queues": {
+      "north": 53,
+      "east": 45,
+      "south": 29,
+      "west": 79
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 1.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2911,
+    "state_queues": {
+      "north": 51,
+      "east": 46,
+      "south": 28,
+      "west": 82
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": -1.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2916,
+    "state_queues": {
+      "north": 52,
+      "east": 48,
+      "south": 26,
+      "west": 82
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 1.3333333333333333,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2921,
+    "state_queues": {
+      "north": 51,
+      "east": 48,
+      "south": 24,
+      "west": 82
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 2.0,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2926,
+    "state_queues": {
+      "north": 49,
+      "east": 48,
+      "south": 24,
+      "west": 82
+    },
+    "action_road": "west",
+    "action_duration": 60,
+    "reward": 3.3333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2931,
+    "state_queues": {
+      "north": 53,
+      "east": 44,
+      "south": 28,
+      "west": 78
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 0.8333333333333334,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2936,
+    "state_queues": {
+      "north": 52,
+      "east": 46,
+      "south": 27,
+      "west": 78
+    },
+    "action_road": "east",
+    "action_duration": 60,
+    "reward": 3.8333333333333335,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2941,
+    "state_queues": {
+      "north": 53,
+      "east": 42,
+      "south": 30,
+      "west": 75
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": -0.16666666666666666,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2946,
+    "state_queues": {
+      "north": 53,
+      "east": 43,
+      "south": 29,
+      "west": 76
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": -3.5,
+    "reason": "phase_end"
+  },
+  {
+    "time": 2951,
+    "state_queues": {
+      "north": 56,
+      "east": 43,
+      "south": 30,
+      "west": 78
+    },
+    "action_road": "north",
+    "action_duration": 60,
+    "reward": 1.6666666666666667,
+    "reason": "phase_end"
   }
 ]
