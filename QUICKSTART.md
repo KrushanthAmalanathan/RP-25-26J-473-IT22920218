@@ -149,4 +149,4 @@ Watch for the emergency vehicle:
 - Dashboard shows **red emergency banner**
 - After ambulance passes, returns to adaptive control
 
-Enjoy your smart traffic system! 🚦
+Enjoy your smart traffic system!🚦
