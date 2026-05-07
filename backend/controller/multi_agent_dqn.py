@@ -9,10 +9,11 @@ try:
     import torch
     import torch.nn as nn
     import torch.optim as optim
-except Exception:
-    torch = None
-    nn = None
-    optim = None
+except ImportError as e:
+    raise ImportError(
+        "PyTorch is required but not installed. "
+        "Install it with: pip install torch torchvision torchaudio"
+    ) from e
 
 
 # =========================
