@@ -1,5 +1,7 @@
 import asyncio
-from typing import Dict, Optional, List
+import os
+from typing import Dict, Optional, List, Set
+from dotenv import load_dotenv
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
@@ -9,6 +11,9 @@ from controller.state_models import StatusResponse, EmergencyInfo, SignalState, 
 from controller.yolo_fake_generator import FakeYOLOGenerator
 from controller.traffic_controller import TrafficController
 from controller.memory_store import MemoryStore
+
+# Load environment variables
+load_dotenv()
 
 app = FastAPI(title="Smart Traffic Backend", version="0.1.0")
 
@@ -20,8 +25,47 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# WebSocket Connection Manager
+class ConnectionManager:
+    """Manages WebSocket connections and broadcasting."""
+    
+    def __init__(self):
+        self.active_connections: Set[WebSocket] = set()
+    
+    async def connect(self, websocket: WebSocket):
+        """Accept and store a new WebSocket connection."""
+        await websocket.accept()
+        self.active_connections.add(websocket)
+        print(f"Client connected. Total clients: {len(self.active_connections)}")
+    
+    def disconnect(self, websocket: WebSocket):
+        """Remove a disconnected WebSocket."""
+        self.active_connections.discard(websocket)
+        print(f"Client disconnected. Total clients: {len(self.active_connections)}")
+    
+    async def broadcast(self, data: dict):
+        """Broadcast a message to all connected clients."""
+        disconnected = []
+        for connection in self.active_connections:
+            try:
+                await connection.send_json(data)
+            except Exception as e:
+                print(f"Error broadcasting to client: {e}")
+                disconnected.append(connection)
+        
+        # Clean up disconnected clients
+        for connection in disconnected:
+            self.disconnect(connection)
+    
+    def get_connection_count(self) -> int:
+        """Return the number of active connections."""
+        return len(self.active_connections)
+
+# Initialize connection manager
+ws_manager = ConnectionManager()
+
 # Core simulation components
-memory_store = MemoryStore("backend/data/memory.json")
+memory_store = MemoryStore("data/memory.json")
 generator = FakeYOLOGenerator(emergency_at_sec=90, emergency_road=Road.south)
 controller = TrafficController(memory_store=memory_store)
 
@@ -73,38 +117,35 @@ async def stop_simulation():
         _sim_task = None
     return ControlResponse(status="stopped")
 
-# WebSocket clients
-_ws_clients: List[WebSocket] = []
+@app.get("/api/ws/status")
+async def ws_status():
+    """Return WebSocket connection status."""
+    return {
+        "connected_clients": ws_manager.get_connection_count(),
+        "ws_url": "ws://localhost:5000/ws/live"
+    }
 
 @app.websocket("/ws/live")
 async def ws_live(websocket: WebSocket):
-    await websocket.accept()
-    _ws_clients.append(websocket)
+    """
+    WebSocket endpoint for live traffic status updates.
+    Clients connect here and receive real-time status broadcasts.
+    """
+    await ws_manager.connect(websocket)
     try:
+        # Keep connection alive; updates are sent via _broadcast_update
         while True:
-            # Keep the connection alive; server pushes updates separately
-            await asyncio.sleep(1)
+            # Receive and ignore client messages (server-side push only)
+            await websocket.receive_text()
     except WebSocketDisconnect:
-        pass
-    finally:
-        try:
-            _ws_clients.remove(websocket)
-        except ValueError:
-            pass
+        ws_manager.disconnect(websocket)
+    except Exception as e:
+        print(f"WebSocket error: {e}")
+        ws_manager.disconnect(websocket)
 
 async def _broadcast_update(status: StatusResponse):
-    # Push JSON to all connected clients
-    stale: List[WebSocket] = []
-    for ws in list(_ws_clients):
-        try:
-            await ws.send_json(status.dict())
-        except Exception:
-            stale.append(ws)
-    for s in stale:
-        try:
-            _ws_clients.remove(s)
-        except ValueError:
-            pass
+    """Broadcast status update to all connected WebSocket clients."""
+    await ws_manager.broadcast(status.dict())
 
 async def _run_loop():
     global _time_sec, _current_status, simulation_active

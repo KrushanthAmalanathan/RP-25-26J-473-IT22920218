@@ -1,34 +1,58 @@
-from typing import Dict, Optional, Tuple
+from typing import Dict, Optional, Tuple, Any
 
-from .state_models import Road, TrafficCounts, EmergencyInfo, DecisionInfo, MemoryRecord
-from .memory_store import MemoryStore
+from .state_models import Road, TrafficCounts, EmergencyInfo, DecisionInfo
+from .multi_agent_dqn import MultiAgentManager, example_junction_config
+
 
 class TrafficController:
-    def __init__(self, memory_store: MemoryStore):
-        self.memory = memory_store
-        self.weights = {"bike": 1, "car": 2, "auto": 2, "bus": 4, "truck": 4, "lorry": 4}
-        self.current_green: Road = Road.south
+    """
+    Traffic Controller using Option-3 Multi-Agent DQN (MultiAgentManager).
+
+    - Uses Sri Lanka-aware priority weights for queues (bus=5).
+    - Emergency preemption remains highest priority.
+    - Decision is made by DQN: agent_manager.decide("J1", obs) -> (action_idx, duration, reason, metrics)
+    """
+
+    def __init__(self):
+        # Queue weights (Sri Lanka-aware)
+        self.weights = {"bike": 1, "car": 2, "auto": 2, "bus": 5, "truck": 4, "lorry": 4}
+
+        # Signal state
+        self.current_green: Road = Road.j8_south_entry
         self.remaining_green: int = 0
-        # For reward calculation
-        self._last_action_road: Optional[Road] = None
-        self._last_action_duration: int = 0
-        self._pre_action_queues: Optional[Dict[Road, int]] = None
 
         # Decision cycle in seconds
         self.decision_cycle: int = 5
         self._since_last_decision: int = 0
 
+        # DQN Multi-Agent Manager (for now, using J1 mapping; extend to J2/J3 later)
+        self.agent_manager = MultiAgentManager(example_junction_config())
+
+        # Mapping between agent action index and Road
+        self._idx_to_road = [
+            Road.west_entry,
+            Road.j1_north_entry,
+            Road.j8_north_entry,
+            Road.j8_east_entry,
+            Road.j8_south_entry
+        ]
+        self._road_to_idx = {r: i for i, r in enumerate(self._idx_to_road)}
+
+        # Junction ID (set to J1 for now; Nimz can extend to J2/J3 later)
+        self.junction_id = "J1"
+
     def reset(self):
-        self.current_green = Road.south
+        self.current_green = Road.j8_south_entry
         self.remaining_green = 0
-        self._last_action_road = None
-        self._last_action_duration = 0
-        self._pre_action_queues = None
         self._since_last_decision = 0
 
     def compute_queues(self, counts: TrafficCounts) -> Dict[Road, int]:
+        """
+        Priority-weighted queue score (used for quick status display / debugging).
+        DQN itself uses per-vehicle-type counts in `obs`.
+        """
         queues: Dict[Road, int] = {}
-        for road in [Road.north, Road.east, Road.south, Road.west]:
+        for road in Road:
             rc = getattr(counts, road.value)
             q = (
                 rc.bike * self.weights["bike"] +
@@ -38,75 +62,122 @@ class TrafficController:
                 rc.truck * self.weights["truck"] +
                 rc.lorry * self.weights["lorry"]
             )
-            queues[road] = q
+            queues[road] = int(q)
         return queues
 
-    def _decide_next(self, queues: Dict[Road, int]) -> Tuple[Road, int, str]:
-        road, duration, reason = self.memory.find_best_action(queues)
-        return road, duration, reason
+    def _build_obs(self, counts: TrafficCounts, emergency: EmergencyInfo) -> Dict[str, Any]:
+        """
+        Build observation dict in the format expected by MultiAgentManager.decide()
 
-    def _reward(self, before: Dict[Road, int], after: Dict[Road, int], acted_road: Road) -> float:
-        # Reward: reduction on acted road minus average increase elsewhere
-        delta_acted = before[acted_road] - after[acted_road]
-        others = [r for r in [Road.north, Road.east, Road.south, Road.west] if r != acted_road]
-        delta_others = sum(after[r] - before[r] for r in others) / max(1, len(others))
-        return float(delta_acted - 0.5 * delta_others)
+        obs = {
+          "approaches": {
+              "N": {"bike":int,"car":int,"auto":int,"bus":int,"truck":int,"lorry":int},
+              "E": {...},
+              "S": {...},
+              "W": {...}
+          },
+          "current_green_index": int,
+          "remaining_green": int,
+          "emergency": bool,
+          "emergency_index": int
+        }
+        """
+        # Convert TrafficCounts into per-approach vehicle-type dict
+        approaches = {}
 
-    def tick_and_decide(self, time_sec: int, counts: TrafficCounts, queues: Dict[Road, int], emergency: EmergencyInfo) -> DecisionInfo:
+        # IMPORTANT: keys here must match your junction config order.
+        road_key_map = {
+            "W": Road.west_entry,
+            "J1N": Road.j1_north_entry,
+            "J8N": Road.j8_north_entry,
+            "J8E": Road.j8_east_entry,
+            "J8S": Road.j8_south_entry,
+        }
+        
+        for key, road in road_key_map.items():
+            rc = getattr(counts, road.value)
+            approaches[key] = {
+                "bike": int(rc.bike),
+                "car": int(rc.car),
+                "auto": int(rc.auto),
+                "bus": int(rc.bus),
+                "truck": int(rc.truck),
+                "lorry": int(rc.lorry),
+            }
+
+        current_green_index = self._road_to_idx.get(self.current_green, 2)  # default south
+
+        em_active = bool(emergency.active and emergency.road is not None)
+        em_idx = 0
+        if em_active and emergency.road is not None:
+            em_idx = self._road_to_idx.get(emergency.road, 0)
+
+        return {
+            "approaches": approaches,
+            "current_green_index": int(current_green_index),
+            "remaining_green": int(self.remaining_green),
+            "emergency": em_active,
+            "emergency_index": int(em_idx),
+        }
+
+    def _apply_action(self, action_idx: int, duration: int) -> Tuple[Road, int]:
+        """
+        Map DQN action index to a Road + apply chosen duration.
+        """
+        idx = max(0, min(action_idx, len(self._idx_to_road) - 1))
+        next_road = self._idx_to_road[idx]
+        self.current_green = next_road
+        self.remaining_green = int(duration)
+        self._since_last_decision = 0
+        return next_road, self.remaining_green
+
+    def tick_and_decide(
+        self,
+        time_sec: int,
+        counts: TrafficCounts,
+        queues: Dict[Road, int],
+        emergency: EmergencyInfo
+    ) -> DecisionInfo:
+        """
+        Called every simulation second.
+        - Decrements remaining green
+        - Handles emergency preemption (fast switch)
+        - At decision cycle or phase end, asks DQN for next action
+        """
+
         # Decrement remaining green
         if self.remaining_green > 0:
             self.remaining_green -= 1
         self._since_last_decision += 1
 
-        # Emergency preemption: switch within ~5 seconds
-        if emergency.active and emergency.road is not None:
-            if self.current_green != emergency.road and (self.remaining_green <= 4 or self._since_last_decision >= self.decision_cycle):
-                # Finish reward for previous action if any
-                if self._last_action_road is not None and self._pre_action_queues is not None:
-                    reward = self._reward(self._pre_action_queues, queues, self._last_action_road)
-                    rec = MemoryRecord(
-                        time=time_sec,
-                        state_queues=self._pre_action_queues,
-                        action_road=self._last_action_road,
-                        action_duration=self._last_action_duration,
-                        reward=reward,
-                        reason="phase_end",
-                    )
-                    self.memory.add_record(rec)
+        # Build obs for the agent
+        obs = self._build_obs(counts, emergency)
 
-                # Switch immediately
-                self.current_green = emergency.road
-                self.remaining_green = max(10, self.decision_cycle)
-                self._last_action_road = self.current_green
-                self._last_action_duration = self.remaining_green
-                self._pre_action_queues = queues.copy()
-                self._since_last_decision = 0
-                return DecisionInfo(method="emergency", reason=f"emergency on {emergency.road.value}, preemption active")
+        # Emergency preemption: switch within ~5 seconds
+        if obs["emergency"] is True and emergency.road is not None:
+            # only preempt if different road and near cycle boundary
+            if self.current_green != emergency.road and (
+                self.remaining_green <= 4 or self._since_last_decision >= self.decision_cycle
+            ):
+                # Let agent manager handle emergency override decision (it returns action/duration too)
+                action_idx, duration, reason, metrics = self.agent_manager.decide(self.junction_id, obs)
+
+                # Apply action
+                self._apply_action(action_idx, duration)
+
+                # If your DecisionInfo model supports metrics, use:
+                # return DecisionInfo(method="emergency", reason=reason, metrics=metrics)
+                return DecisionInfo(method="emergency", reason=reason)
 
         # Normal decision at cycle boundary or when green ends
         if self.remaining_green <= 0 or self._since_last_decision >= self.decision_cycle:
-            # Finish reward for previous action
-            if self._last_action_road is not None and self._pre_action_queues is not None:
-                reward = self._reward(self._pre_action_queues, queues, self._last_action_road)
-                rec = MemoryRecord(
-                    time=time_sec,
-                    state_queues=self._pre_action_queues,
-                    action_road=self._last_action_road,
-                    action_duration=self._last_action_duration,
-                    reward=reward,
-                    reason="phase_end",
-                )
-                self.memory.add_record(rec)
+            action_idx, duration, reason, metrics = self.agent_manager.decide(self.junction_id, obs)
 
-            # Decide next
-            next_road, duration, reason = self._decide_next(queues)
-            self.current_green = next_road
-            self.remaining_green = duration
-            self._last_action_road = self.current_green
-            self._last_action_duration = self.remaining_green
-            self._pre_action_queues = queues.copy()
-            self._since_last_decision = 0
-            return DecisionInfo(method="memory", reason=reason)
+            self._apply_action(action_idx, duration)
+
+            # If your DecisionInfo supports metrics, use:
+            # return DecisionInfo(method="dqn", reason=reason, metrics=metrics)
+            return DecisionInfo(method="dqn", reason=reason)
 
         # Continue current phase
         return DecisionInfo(method="hold", reason=f"holding {self.current_green.value}")

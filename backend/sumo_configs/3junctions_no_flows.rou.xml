@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicle type definitions -->
+    <vType id="car" accel="2.00" decel="1.50" sigma="0.5" length="5.0" maxSpeed="3.00" color="yellow"/>
+    <vType id="real_car" accel="2.00" decel="1.50" sigma="0.5" length="5.0" maxSpeed="3.00" color="green"/> 
+    <vType id="bus" accel="2.00" decel="1.50" sigma="0.5" length="12.0" maxSpeed="2.50" color="blue" guiShape="bus"/>
+    <vType id="truck" accel="2.00" decel="1.50" sigma="0.5" length="7.0" maxSpeed="2.00" color="red" guiShape="truck"/>
+    <vType id="lorry" accel="2.00" decel="1.50" sigma="0.5" length="8.0" maxSpeed="2.00" color="orange" guiShape="truck"/>
+    <vType id="bike" accel="2.00" decel="1.50" sigma="0.5" length="3.0" maxSpeed="2.80" color="cyan" guiShape="motorcycle"/>
+    <vType id="auto" accel="2.00" decel="1.50" sigma="0.5" length="6.0" maxSpeed="3.00" color="magenta" guiShape="taxi"/>
+
+    <!-- Pedestrian types -->
+    <vType id="adult" vClass="pedestrian" maxSpeed="0.50" color="green"/>
+    <vType id="elder" vClass="pedestrian" maxSpeed="0.45" color="gray"/>
+    <vType id="student" vClass="pedestrian" maxSpeed="0.40" color="yellow"/>
+    <vType id="mobility_aid" vClass="pedestrian" maxSpeed="0.30" color="blue"/>
+
+    <!-- Emergency Vehicles -->
+    <vType id="police" accel="2.00" decel="1.50" sigma="0.3" length="6.0" maxSpeed="6.00" guiShape="police" probability="0.1"/>
+    <vType id="ambulance" accel="2.00" decel="1.50" sigma="0.3" length="8.0" maxSpeed="6.00" guiShape="emergency" probability="0.1"/>
+    <vType id="firetruck" accel="2.00" decel="1.50" sigma="0.3" length="10.0" maxSpeed="6.00" guiShape="firebrigade" probability="0.05"/>
+</routes>

@@ -9,16 +9,14 @@ class FakeYOLOGenerator:
     Can inject an emergency at a configured time for a given road.
     """
 
-    def __init__(self, emergency_at_sec: Optional[int] = 90, emergency_road: Road = Road.south):
+    def __init__(self, emergency_at_sec: Optional[int] = 90, emergency_road: Road = Road.west_entry):
         self.emergency_at_sec = emergency_at_sec
         self.emergency_road = emergency_road
         self._t = 0
         # Base rates per road and vehicle type to shape traffic
         self._base_profiles = {
-            Road.north: {"car": 4, "bike": 3, "bus": 1, "truck": 1, "lorry": 0, "auto": 2},
-            Road.east:  {"car": 2, "bike": 2, "bus": 0, "truck": 0, "lorry": 0, "auto": 1},
-            Road.south: {"car": 6, "bike": 4, "bus": 1, "truck": 1, "lorry": 0, "auto": 3},
-            Road.west:  {"car": 3, "bike": 2, "bus": 0, "truck": 0, "lorry": 0, "auto": 1},
+            road: {"car": 4, "bike": 2, "bus": 1, "truck": 1, "lorry": 0, "auto": 2}
+            for road in Road
         }
 
     def reset(self):
